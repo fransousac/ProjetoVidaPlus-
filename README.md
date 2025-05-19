@@ -75,16 +75,23 @@ Authorization: Bearer <seu_token>
 ## 📂 Estrutura do Projeto
 
 ```
-ProjetoVidaPlus/
+projeto-back/
 │
-├── app.py                 # Arquivo principal da aplicação
-├── database.py            # Conexão com o banco SQLite
-├── models.py              # Modelos de criação de tabelas
-├── banco.db               # Banco de dados local
-├── routes/                # Blueprints separados por módulo
-│   ├── pacientes.py
-│   ├── profissionais.py
-│   ├── consultas.py
-│   └── prescricoes.py
-└── README.md             
+├── app.py                  # Arquivo principal para inicialização da aplicação Flask
+├── database.py             # Conexão e utilitários do banco de dados
+├── models.py               # Criação das tabelas do banco de dados
+├── reset_db.py             # Script para resetar o banco de dados (opcional)
+├── banco.db                # Arquivo SQLite contendo os dados
+├── usuarios.py             # Registro de usuários no sistema
+├── ver_usuarios.py         # Utilitário para listar usuários
+│
+├── routes/                 # Pasta contendo as rotas organizadas por módulo
+│   ├── __init__.py
+│   ├── auth.py             # Rota de autenticação JWT
+│   ├── consultas.py        # Rotas relacionadas a consultas
+│   ├── pacientes.py        # Rotas de pacientes
+│   ├── prescricoes.py      # Rotas de prescrições
+│   ├── profissionais.py    # Rotas de profissionais da saúde
+
+
 ```
